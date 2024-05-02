@@ -1,14 +1,18 @@
-function Sidebar (){
-    return (
-        <div className="sidebar">
-            <a href="index.html">Home </a>
-            <br />
-            <a href="index.html">About</a>
-        </div>
-    )
+import { Link } from "react-router-dom";
 
-
-
+function Sidebar() {
+  return (
+    <nav className="sidebar">
+      <div>
+        <span>
+          <Link to="/">Home</Link>
+        </span>
+        <span>
+          <Link to="./AboutPage">About</Link>
+        </span>
+      </div>
+    </nav>
+  );
 }
 
-export default Sidebar
+export default Sidebar;
