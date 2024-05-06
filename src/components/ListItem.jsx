@@ -1,36 +1,18 @@
-import data from "../data/data.json";
-import { useState } from "react";
+import ItemSummary from "./ItemSummary";
 
-function ListItem() {
-  const [content, Setcontent] = useState(data);
-
-  function deleteItem(dataId) {
-    const newValue = content.filter((ele) => ele.id !== dataId);
-    Setcontent(newValue);
-  }
+function ItemList(props) {
   return (
-    <>
-      {content.map((element) => {
+    <div>
+      {props.content.map((ele) => {
         return (
-          <div className="title" key={element.id}>
-            {element.discountPercentage > 15 ? (
-              <p className="deal">*GREAT DEAL*</p>
-            ) : (
-              ""
-            )}
-            <p>{element.title}</p>
-            <button
-              onClick={() => {
-                deleteItem(element.id);
-              }}
-            >
-              Delete
-            </button>
-          </div>
+          <ItemSummary
+            key={ele.id}
+            itemDetails={ele}
+            callbackToDelete={props.callbackToDelete}
+          />
         );
       })}
-    </>
+    </div>
   );
 }
-
-export default ListItem;
+export default ItemList;

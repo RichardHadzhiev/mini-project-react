@@ -60,7 +60,7 @@
   color: aliceblue;
   border: 1px solid white;
   border-radius: 10px;
-  width: 25%;
+  width: 60%;
   margin: 5px;
   display: inline-block;
   flex-direction: row;
@@ -75,4 +75,14 @@
   margin: 0px;
   box-shadow: 5px 5px 10px -5px;
   transition: 0.4s;
+}
+.items {
+  width: 25%;
+  display: inline-block;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: aliceblue;
+  border: 1px solid white;
+  border-radius: 10px;
 }
