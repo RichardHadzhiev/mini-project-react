@@ -2,9 +2,13 @@ import { Link } from "react-router-dom";
 
 function itemSummary(props) {
   return (
-    <div className="items" key={props.itemDetails.id}>
+    <div className="title" key={props.itemDetails.id}>
       {props.itemDetails.thumbnail ? (
-        <img src={props.itemDetails.thumbnail} />
+        <img
+          className="image"
+          src={props.itemDetails.thumbnail}
+          style={{ maxWidth: "100px" }}
+        />
       ) : (
         "no image"
       )}

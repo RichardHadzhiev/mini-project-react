@@ -6,7 +6,15 @@ function ItemDetails(props) {
   return (
     <div className="title">
       <h1>{item.title}</h1>
-      {item.thumbnail ? <img src={item.thumbnail} /> : "no image"}
+      {item.thumbnail ? (
+        <img
+          className="image"
+          src={item.thumbnail}
+          style={{ maxWidth: "100px" }}
+        />
+      ) : (
+        "no image"
+      )}
       <p>{item.brand}</p>
       <p>Description: {item.description}</p>
       <p>Price: {item.price}</p>
