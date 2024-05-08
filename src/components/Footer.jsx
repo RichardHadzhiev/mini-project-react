@@ -1,8 +1,7 @@
 function Footer() {
   return (
-    <div>
+    <div className="footer">
       <a
-        className="footer"
         href="https://github.com/RichardHadzhiev/mini-project-react"
         target="_"
       >

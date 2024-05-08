@@ -1,18 +1,22 @@
 import ItemSummary from "./ItemSummary";
+import Form from "./Form";
 
-function ItemList(props) {
+function ItemList({ content, setContent, callbackToDelete }) {
   return (
-    <div className="container">
-      {props.content.map((ele) => {
-        return (
-          <ItemSummary
-            key={ele.id}
-            itemDetails={ele}
-            callbackToDelete={props.callbackToDelete}
-          />
-        );
-      })}
-    </div>
+    <>
+      <Form content={content} setContent={setContent} />
+      <div className="container">
+        {content.map((ele) => {
+          return (
+            <ItemSummary
+              key={ele.id}
+              itemDetails={ele}
+              callbackToDelete={callbackToDelete}
+            />
+          );
+        })}
+      </div>
+    </>
   );
 }
 export default ItemList;

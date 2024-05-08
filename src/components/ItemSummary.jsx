@@ -11,7 +11,7 @@ function itemSummary(props) {
             ) : (
               "no image"
             )}
-            <p>{props.itemDetails.title}</p>
+            <p className="text">{props.itemDetails.title}</p>
           </div>
         </Link>
       </div>
