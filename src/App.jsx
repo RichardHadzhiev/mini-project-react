@@ -57,7 +57,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <section className="form">
+      <section className="submit">
         <form onSubmit={handleSubmit}>
           <label>
             Title:
@@ -159,10 +159,8 @@ function App() {
             />
           </label>
         </form>
-        <form onSubmit={handleSubmit}>
-          <p>
-            <button>Create</button>
-          </p>
+        <form className="create" onSubmit={handleSubmit}>
+          <button>Create</button>
         </form>
       </section>
 

@@ -1,9 +1,9 @@
 function Navbar() {
-    return (
-        <div className="navbar">
-    <img src="./logo.png" />
+  return (
+    <div className="navbar">
+      <img src="src\assets\Rich (1).png" />
     </div>
-    )
+  );
 }
 
 export default Navbar;
