@@ -2,7 +2,7 @@ import ItemSummary from "./ItemSummary";
 
 function ItemList(props) {
   return (
-    <div>
+    <div className="container">
       {props.content.map((ele) => {
         return (
           <ItemSummary

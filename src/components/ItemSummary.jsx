@@ -2,21 +2,20 @@ import { Link } from "react-router-dom";
 
 function itemSummary(props) {
   return (
-    <div className="title" key={props.itemDetails.id}>
-      {props.itemDetails.thumbnail ? (
-        <img
-          className="image"
-          src={props.itemDetails.thumbnail}
-          style={{ maxWidth: "100px" }}
-        />
-      ) : (
-        "no image"
-      )}
-      <p>{props.itemDetails.title}</p>
+    <div className="container" key={props.itemDetails.id}>
+      <Link to={`/items/${props.itemDetails.id}`}>
+        <div className="title">
+          {props.itemDetails.thumbnail ? (
+            <img className="image" src={props.itemDetails.thumbnail} />
+          ) : (
+            "no image"
+          )}
 
-      <Link to={`/items/${props.itemDetails.id}`}>More Detail </Link>
-
+          <p>{props.itemDetails.title}</p>
+        </div>
+      </Link>
       <button
+        className="button"
         onClick={() => {
           props.callbackToDelete(props.itemDetails.id);
         }}

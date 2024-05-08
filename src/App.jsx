@@ -57,7 +57,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <section>
+      <section className="form">
         <form onSubmit={handleSubmit}>
           <label>
             Title:

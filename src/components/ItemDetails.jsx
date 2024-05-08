@@ -4,17 +4,9 @@ function ItemDetails(props) {
   const { itemId } = useParams();
   const item = props.content.find((ele) => ele.id === parseInt(itemId));
   return (
-    <div className="title">
+    <div className="details">
       <h1>{item.title}</h1>
-      {item.thumbnail ? (
-        <img
-          className="image"
-          src={item.thumbnail}
-          style={{ maxWidth: "100px" }}
-        />
-      ) : (
-        "no image"
-      )}
+      {item.thumbnail ? <img src={item.thumbnail} /> : "no image"}
       <p>{item.brand}</p>
       <p>Description: {item.description}</p>
       <p>Price: {item.price}</p>
